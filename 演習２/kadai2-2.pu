@@ -1,0 +1,16 @@
+@startuml 例題2-2
+left to right direction
+actor ホテル従業員
+actor 経営者
+rectangle ホテル{
+  usecase チェックイン
+  usecase チェックアウト
+  usecase 清掃
+  usecase 経営情報確認
+}
+ホテル従業員 --> チェックイン
+ホテル従業員 --> チェックアウト
+ホテル従業員 --> 清掃
+経営者 --> 経営情報確認
+チェックイン <|-- チェックアウト
+@enduml
