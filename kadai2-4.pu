@@ -1,7 +1,0 @@
-@startuml 例題2-4
-rectangle ホテル {
-usecase キャンペーン価格で予約する
-usecase (<u>キャンペーン中</u>\n拡張点\nキャンペーン価格で予約) as input
-}
-input <. (キャンペーン価格で予約する) : <<extend>>
-@enduml
