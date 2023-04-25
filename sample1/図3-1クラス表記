@@ -1,4 +1,4 @@
-@startuml　
+@startuml 図3-1クラス表記
 skinparam classAttributeIconSize 0
 class A <<stereotype>> {}
 class B {
