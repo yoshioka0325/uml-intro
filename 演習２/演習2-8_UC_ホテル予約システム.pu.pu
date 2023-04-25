@@ -20,7 +20,7 @@ rectangle ホテル予約システム{
 利用者 -->input
 input   .>ログイン:<<include>>
 input   .>キャンペーン価格:<<include>>
-キャンペーン .>unput:<<extend>>
+キャンペーン .>input:<<extend>>
 予約の集計  <-- 管理者
 空室状況の入力 <-- ホテル従業員
 ログイン <. 予約の集計:  <<include>>
