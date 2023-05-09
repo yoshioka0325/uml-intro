@@ -1,0 +1,18 @@
+@startuml 演習3-1
+abstract class 従業員 {
+    +名前
+    +給与を支払う()
+}
+class 派遣 extends 従業員 {
+    +派遣先
+    +給与を支払う()
+}
+class 契約社員 extends 従業員 {
+    +契約期間
+    +給与を支払う()
+}
+class 正社員 extends 従業員 {
+    +役職
+    +給与を支払う()
+}
+@enduml
