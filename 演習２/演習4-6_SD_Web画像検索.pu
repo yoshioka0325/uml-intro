@@ -1,0 +1,23 @@
+@startuml 演習4-6
+title Webページで画像を検索して閲覧するシーケンス図
+actor ユーザー
+participant ブラウザ
+participant Webサーバー
+participant 画像サーバー
+activate ブラウザ
+ユーザー -> ブラウザ: 画像のリンクボタンを押す
+alt 画像のファイル名がWebサーバーにある場合
+    activate Webサーバー
+    ブラウザ -> Webサーバー: 画像のファイル名を伝える
+    activate 画像サーバー
+    Webサーバー -> 画像サーバー: 画像のファイルを探す
+    画像サーバー -> Webサーバー: 画像ファイルを返す
+    deactivate 画像サーバー
+    Webサーバー -> ブラウザ: 画像ファイルを返す
+    ブラウザ -> ブラウザ: 画像を閲覧する
+    deactivate Webサーバー
+else 画像のファイル名がWebサーバーにない場合
+    ブラウザ -> ブラウザ: エラーメッセージを表示する
+end
+deactivate ブラウザ
+@enduml
