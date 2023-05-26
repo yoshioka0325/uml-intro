@@ -1,0 +1,21 @@
+@startuml 演習6-3ユースケース図
+left to right direction
+actor 患者
+actor 看護士
+rectangle "メニュー" as Menu
+rectangle "予約と確認" as Reservation
+rectangle "あなたの順番" as YourTurn
+rectangle "今の順番" as CurrentTurn
+rectangle "診察終了" as end
+患者 --> Menu : 開く
+Menu --> Reservation : 予約をする
+Reservation --> YourTurn : 登録ボタンを押す
+YourTurn --> Menu : 戻る
+Reservation --> YourTurn : 確認ボタンを押す
+YourTurn --> Menu : 戻る
+Reservation --> Menu : 取消ボタンを押す
+CurrentTurn --> YourTurn : 現在の患者番号を表示
+YourTurn --> end
+end --> 看護士
+看護士 --> CurrentTurn : 患者番号を増やす
+@endumls
