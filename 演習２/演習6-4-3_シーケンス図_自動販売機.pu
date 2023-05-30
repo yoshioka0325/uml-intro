@@ -1,0 +1,27 @@
+@startuml 演習6-4シーケンス図
+hide footbox
+ autonumber
+skinparam style strictuml
+actor 客
+participant 料金装置
+participant ボタン
+participant ベンダー装置
+activate 客
+客 -> 料金装置: 金額投入
+activate 料金装置
+料金装置 -> ボタン: ドリンク選択
+activate ボタン
+ボタン -> ベンダー装置: ドリンク購入要求
+activate ベンダー装置
+ベンダー装置 -> ボタン: ドリンク確定
+deactivate ベンダー装置
+ボタン -> 料金装置: 購入金額確認
+activate 料金装置
+deactivate ボタン
+料金装置 -> ベンダー装置: ドリンク購入要求
+activate ベンダー装置
+ベンダー装置 -> 客: ドリンク提供
+deactivate ベンダー装置
+deactivate 料金装置
+deactivate 客
+@enduml

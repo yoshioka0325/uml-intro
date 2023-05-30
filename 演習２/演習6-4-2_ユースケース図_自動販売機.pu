@@ -1,0 +1,17 @@
+@startuml 演習6-4ユースケース図
+left to right direction
+actor 客
+actor ベンダー
+rectangle "自動販売機" {
+  usecase (ドリンク選択)
+  usecase (投入金額確認)
+  usecase (お釣り返却)
+  usecase (在庫確認)
+  usecase (商品補充)
+}
+客 -- (ドリンク選択)
+客 -- (投入金額確認)
+客 -- (お釣り返却)
+(在庫確認) -- ベンダー
+(商品補充) -- ベンダー
+@enduml
