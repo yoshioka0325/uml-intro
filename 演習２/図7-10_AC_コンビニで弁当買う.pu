@@ -1,0 +1,25 @@
+@startuml 演習7-0
+|客|
+start
+:弁当をレジに持っていく;
+|店員|
+fork
+|店員|
+|客|
+    :お金を支払う;
+|客|
+|店員|
+:清算する;
+fork again
+|店員|
+    if (温めますか？) then (Yes)
+        :弁当を温める;
+    else (No)
+    endif
+    :弁当を袋に入れる;
+|店員|
+end fork
+|客|
+:弁当を手に持つ;
+stop
+@enduml
